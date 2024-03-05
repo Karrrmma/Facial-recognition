@@ -1,0 +1,31 @@
+.header{
+  text-align: center;
+  background-color: hsla(200, 100%, 50%, 0.021);
+  padding:5PX; 
+  margin: auto;
+  
+  border: 0px solid hsl(0,0%,80%);
+  margin-top: 100px;
+  border-radius: 10px;
+  font-size: 50px;
+  
+  
+  
+}
+
+.button{
+  background-color: hsl(200, 100%, 50%);
+  
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-family: Helvetica, sans-serif;
+  margin-top:100px;
+  margin-left:790px
+}
+.camera-edit{
+  width:100px;
+  margin-top: 100px;
+  margin-left: 590px;
+}
