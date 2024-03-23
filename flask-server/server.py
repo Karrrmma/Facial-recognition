@@ -26,7 +26,10 @@ def check_face(frame, reference_encoding):
 def main():
     face_cascade = load_cascade()
 
-    reference_img = face_recognition.load_image_file("123.jpeg")
+    reference_img = face_recognition.load_image_file("obama.jpg")
+    reference_img = face_recognition.load_image_file("123.jpg")
+
+
     reference_encoding = face_recognition.face_encodings(reference_img)[0]
 
     cap = cv2.VideoCapture(0)
@@ -49,7 +52,7 @@ def main():
             yield (b'--frame\r\n'
                    b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
 
-@app.route('/now')
+@app.route('/video_feed')
 def video_feed():
     return Response(main(),
                     mimetype='multipart/x-mixed-replace; boundary=frame')

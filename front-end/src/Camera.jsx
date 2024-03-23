@@ -1,26 +1,12 @@
-import React, { useRef, useEffect } from 'react';
+import React from 'react';
 
 function Camera() {
-  const videoRef = useRef(null);
-
-  useEffect(() => {
-    if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-      navigator.mediaDevices.getUserMedia({ video: true })
-        .then(stream => {
-          if (videoRef.current) {
-            videoRef.current.srcObject = stream;
-          }
-        })
-        .catch(err => console.error(err));
-    }
-  }, []);
-
-  return (
-    <div className="camera-edit">
-
-      <video ref={videoRef} autoPlay />
-    </div>
-  );
+    return (
+        <div>
+            <h1>Live Video Feed</h1>
+            <img src="http://localhost:5000/video_feed" alt="Video Feed" />
+        </div>
+    );
 }
 
 export default Camera;
